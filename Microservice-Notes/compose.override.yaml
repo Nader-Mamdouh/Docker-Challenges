@@ -1,0 +1,9 @@
+services:
+  notesbook-backend:
+    networks:
+      - notes-app-net
+  notes-backend:
+    environment:
+      - NOTEBOOKS_API_URL=http://notesbook-backend/api/notesbook-backend
+    networks:
+      - notes-app-net
